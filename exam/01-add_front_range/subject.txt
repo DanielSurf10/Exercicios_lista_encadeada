@@ -1,6 +1,6 @@
 Nome do exercício	: add_front_range
 Arquivos esperados	: add_front_range.c
-Funções permitidas	: malloc, ft_lstnew, ft_add_front
+Funções permitidas	: malloc, ft_lstnew, ft_lstadd_front
 --------------------------------------------------------------------------------
 
 Escreva uma função que receba como parâmetro 2 inteiros, min e max, que

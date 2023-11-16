@@ -1,13 +1,13 @@
 Nome do exercício	: add_back_range
 Arquivos esperados	: add_back_range.c
-Funções permitidas	: malloc, ft_lstnew, ft_add_back
+Funções permitidas	: malloc, ft_lstnew, ft_lstadd_back
 --------------------------------------------------------------------------------
 
 Escreva uma função que receba como parâmetro 2 inteiros, min e max, que
 crie uma lista com números consecutivos de valores que começam em min e
 terminam em max, e então retorne um ponteiro para o primeiro nó dessa lista.
 É necessário allocar (com malloc()) cada inteiro ao colocar no nó da lista.
-É a mesma coisa do exercício 1, mas agora só pode usar a função add_back
+É a mesma coisa do exercício 1, mas agora só pode usar a função ft_lstadd_back
 para adicionar nós na lista.
 
 Exemplos:
