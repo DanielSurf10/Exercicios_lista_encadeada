@@ -1,0 +1,21 @@
+Nome do exercício	: add_front_range
+Arquivos esperados	: add_front_range.c
+Funções permitidas	: malloc, ft_lstnew, ft_add_front
+--------------------------------------------------------------------------------
+
+Escreva uma função que receba como parâmetro 2 inteiros, min e max, que
+crie uma lista com números consecutivos de valores que começam em min e
+terminam em max, e então retorne um ponteiro para o primeiro nó dessa lista.
+É necessário allocar (com malloc()) cada inteiro ao colocar no nó da lista.
+
+Exemplos:
+
+- Com (1, 3)   a sua lista deve ser: {1} -> {2} -> {3} -> NULL
+- Com (-1, 2)  a sua lista deve ser: {-1} -> {0} -> {1} -> {2} -> NULL
+- Com (0, 0)   a sua lista deve ser: {0} -> NULL
+- Com (0, -3)  a sua lista deve ser: {0} -> {-1} -> {-2} -> {-3} -> NULL
+- Com (-2, -5) a sua lista deve ser: {-2} -> {-3} -> {-4} -> {-5} -> NULL
+
+A sua função deve ser declarada da seguinte maneira:
+
+t_list	add_front_range(int min, int max);
