@@ -16,27 +16,24 @@ print(f'|{"encadeada".center(48)}|')
 print('-' * 50)
 
 print()
-print('0 - preparar ambiente')
 for sub in range(len(subjects)):
-	print(f'{sub + 1} - {subjects[sub]}')
+	print(f'{sub} - {subjects[sub]}')
 print()
 
-choice = int(input('Qual é a sua escolha: ')) - 1
+choice = int(input('Qual é a sua escolha: '))
 print('-' * 50)
 
-if (choice == -1):
-	for folder in exam:
-		os.system(f'mkdir -p rendu/{folder}')
+for folder in exam:
+	os.system(f'mkdir -p rendu/{folder}')
 
-	os.system('cp tester/linked_list.h rendu')
+os.system('cp tester/linked_list.h rendu')
 
-	if (not os.path.isfile('tester/linked_list.a')):
-		os.system('make -C tester/src_lista all clean')
-	os.system('cp tester/linked_list.a rendu')
+if (not os.path.isfile('tester/linked_list.a')):
+	os.system('make -C tester/src_lista all clean')
+os.system('cp tester/linked_list.a rendu')
 
-	if (not os.path.exists('exam')):
-		os.system('cp -r tester/exam exam')
-	exit()
+if (not os.path.exists('exam')):
+	os.system('cp -r tester/exam exam')
 
 tests = sorted(os.listdir(f'tester/grading/{exam[choice]}/tests'))
 original_file = f'tester/grading/{exam[choice]}/{subjects[choice]}.c'
@@ -48,6 +45,8 @@ os.system(f'echo -n "" > trace/{exam[choice]}/trace_errors')
 os.system(f'echo -n "" > trace/{exam[choice]}/trace_all')
 
 for main in tests:
+	print(main, end=' : ')
+
 	os.system(f'cc -I tester {original_file} tester/grading/{exam[choice]}/tests/{main} tester/linked_list.a -o tester/tmp/original')
 	os.system(f'cc -I tester {for_test_file} tester/grading/{exam[choice]}/tests/{main} tester/linked_list.a -o tester/tmp/for_test')
 
@@ -59,8 +58,6 @@ for main in tests:
 
 	with open('tester/tmp/for_test.out', 'r') as arq_for_test:
 		read_for_test = arq_for_test.read()
-
-	print(main, end=' : ')
 
 	if (read_original == read_for_test):
 		print('ok')
