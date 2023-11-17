@@ -1,8 +1,8 @@
 import os
 
+subjects = []
 valgrind = 'valgrind -q --leak-check=full --show-leak-kinds=all'
 exam = sorted(os.listdir('tester/exam'))
-subjects = []
 
 for a in exam:
 	with open(f'tester/exam/{a}/subject.txt', 'r') as arq:
@@ -52,7 +52,7 @@ for main in tests:
 	os.system(f'cc -I tester {for_test_file} tester/grading/{exam[choice]}/tests/{main} tester/linked_list.a -o tester/tmp/for_test')
 
 	os.system('tester/tmp/original > tester/tmp/original.out')
-	os.system('tester/tmp/for_test > tester/tmp/for_test.out')
+	os.system(f'{valgrind} tester/tmp/for_test > tester/tmp/for_test.out')
 
 	with open('tester/tmp/original.out', 'r') as arq_original:
 		read_original = arq_original.read()
