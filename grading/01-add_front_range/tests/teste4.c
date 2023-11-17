@@ -1,41 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   add_front_range.c                                  :+:      :+:    :+:   */
+/*   teste4.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danbarbo <danbarbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/16 20:12:15 by danbarbo          #+#    #+#             */
-/*   Updated: 2023/11/17 00:40:28 by danbarbo         ###   ########.fr       */
+/*   Created: 2023/11/16 20:17:18 by danbarbo          #+#    #+#             */
+/*   Updated: 2023/11/17 00:16:31 by danbarbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "linked_list.h"
+#include <stdio.h>
 
-t_list	*add_front_range(int min, int max)
+t_list	*add_front_range(int min, int max);
+
+void	print_list(t_list *list)
 {
-	int		i;
-	int		size;
-	int		*num;
-	t_list	*list;
 	t_list	*node;
 
-	i = max;
-	list = NULL;
-	size = max - min;
-	if (size <= 0)
-		size = -size;
-	while (size >= 0)
+	node = list;
+	while (node)
 	{
-		num = malloc(sizeof(int));
-		*num = i;
-		node = ft_lstnew(num);
-		ft_lstadd_front(&list, node);
-		if (min < max)
-			i--;
-		else
-			i++;
-		size--;
+		printf("{ %d } -> ", *(int *)node->content);
+		node = node->next;
 	}
-	return (list);
+	printf("{ NULL }\n");
+}
+
+void	free_content(void *content)
+{
+	free(content);
+}
+
+int	main(void)
+{
+	t_list	*list;
+
+	list = add_front_range(0, 0);
+	print_list(list);
+	ft_lstclear(&list, &free_content);
+	return (0);
 }
