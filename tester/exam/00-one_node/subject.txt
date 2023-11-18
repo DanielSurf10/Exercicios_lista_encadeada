@@ -1,0 +1,22 @@
+Nome do exercício	: one_node
+Arquivos esperados	: one_node.c
+Funções permitidas	: malloc, ft_lstnew
+--------------------------------------------------------------------------------
+
+Escreva uma função que crie uma lista com um único nó contendo um inteiro
+fornecido como parâmetro.
+A função deve alocar dinamicamente a memória para o inteiro (com malloc()) e
+retornar um ponteiro para o nó recém-criado.
+
+Exemplos:
+
+- Com (0)  a sua lista deve ser: { 0 } -> { NULL }
+- Com (1)  a sua lista deve ser: { 1 } -> { NULL }
+- Com (42) a sua lista deve ser: { 42 } -> { NULL }
+- Com (-5)  a sua lista deve ser: { -5 } -> { NULL }
+
+
+A sua função deve ser declarada da seguinte maneira:
+
+t_list	*one_node(int num);
+11

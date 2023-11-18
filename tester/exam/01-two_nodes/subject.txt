@@ -1,0 +1,25 @@
+Nome do exercício	: two_nodes
+Arquivos esperados	: two_nodes.c
+Funções permitidas	: malloc, ft_lstnew
+--------------------------------------------------------------------------------
+
+Escreva uma função que crie uma lista com dois nós.
+O primeiro nó deve conter o inteiro num1, e o segundo nó deve conter o
+inteiro num2.
+A função deve alocar dinamicamente a memória para cada inteiro (com malloc())
+e retornar um ponteiro para a lista recém-criada.
+É proibido o uso das funções ft_lstadd_front e ft_lstadd_back,
+use apenas a ft_lstnew;
+
+
+Exemplos:
+
+- Com (0, 0)      a sua lista deve ser: { 0 } -> { 0 } -> { NULL }
+- Com (1, 2)      a sua lista deve ser: { 1 } -> { 2 } -> { NULL }
+- Com (-5, 10)    a sua lista deve ser: { -5 } -> { 10 } -> { NULL }
+- Com (-10, -20)  a sua lista deve ser: { -10 } -> { -20 } -> { NULL }
+
+
+A sua função deve ser declarada da seguinte maneira:
+
+t_list	*two_nodes(int num1, int num2);
