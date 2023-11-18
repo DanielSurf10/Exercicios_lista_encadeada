@@ -1,0 +1,8 @@
+Nome do exercício	: is_empty
+Arquivos esperados	: is_empty.c
+Funções permitidas	:
+--------------------------------------------------------------------------------
+
+Escreva uma função que retorna 1 se a lista estiver vazia e 0 caso contrário.
+
+int	is_empty(t_list *lst);

@@ -16,24 +16,28 @@ print(f'|{"encadeada".center(48)}|')
 print('-' * 50)
 
 print()
+print('0 - Arrumar ambinete')
 for sub in range(len(subjects)):
-	print(f'{sub} - {subjects[sub]}')
+	print(f'{sub + 1} - {subjects[sub]}')
 print()
 
-choice = int(input('Qual é a sua escolha: '))
+choice = int(input('Qual é a sua escolha: ')) - 1
 print('-' * 50)
 
-for folder in exam:
-	os.system(f'mkdir -p rendu/{folder}')
+if choice == -1:
+	for folder in exam:
+		os.system(f'mkdir -p rendu/{folder}')
 
-os.system('cp tester/linked_list.h rendu')
+	os.system('cp tester/linked_list.h rendu')
 
-if (not os.path.isfile('tester/linked_list.a')):
-	os.system('make -C tester/src_lista all clean')
-os.system('cp tester/linked_list.a rendu')
+	if (not os.path.isfile('tester/linked_list.a')):
+		os.system('make -C tester/src_lista all clean')
+	os.system('cp tester/linked_list.a rendu')
 
-if (not os.path.exists('exam')):
-	os.system('cp -r tester/exam exam')
+	if (not os.path.exists('exam')):
+		os.system('cp -r tester/exam exam')
+
+	exit()
 
 tests = sorted(os.listdir(f'tester/grading/{exam[choice]}/tests'))
 original_file = f'tester/grading/{exam[choice]}/{subjects[choice]}.c'
