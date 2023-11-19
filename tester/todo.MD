@@ -7,10 +7,10 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 - [X] Crie uma função is_empty que retorna 1 se a lista estiver vazia e 0 caso contrário
 - [X] Escreva uma função que crie uma lista com um único nó contendo um inteiro fornecido como parâmetro.
 - [X] Crie uma função que receba como parâmetro dois inteiro e crie uma lista com dois nós contendo esses dois inteiros
-- [ ] Crie uma função que conte qual é o tamanho da lista
 - [ ] Implemente uma função que verifica se um determinado conteúdo existe na lista. Retorna 1 se encontrado, 0 caso contrário.
 - [ ] Implemente uma função ft_lst_search que recebe a lista e um conteúdo a ser buscado. A função deve retornar o primeiro nó que contém o conteúdo ou NULL se não encontrado.
 - [ ] Crie uma função ft_lstcount que conta quantas vezes um determinado conteúdo aparece na lista.
+- [ ] Crie uma função que retorne o índice de um determinado valor, ou o tamanho da lista caso não seja encontrado.
 - [ ] Crie uma função que cheque se a lista é palindroma ou não
 - [ ] Crie uma função que econtre um par o qual a soma é igual a um valor X. Ex: (1 2 3 4 5 6 7), X = 4 -> (1,3)
 
@@ -25,7 +25,9 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 - [ ] Crie uma função lst_reverse que inverte a ordem da lista
 - [ ] Crie uma função que ordene a lista em ordem crescente
 - [ ] Crie uma função que remove os itens duplicados
-- [ ] Implemente uma função ft_lst_to_array que converte uma lista encadeada para um array.
+- [ ] Implemente uma função ft_lst_to_array que converte uma lista encadeada inteira para um array.
+- [ ] Implemente uma função ft_lst_to_array que converte uma parte lista encadeada inteira para um array, até um índice específico da lista.
+- [ ] Implemente uma função ft_lst_to_array que converte uma parte lista encadeada inteira para um array, até um conteúdo específico da lista ou toda se o conteúdo não foi encontrado.
 - [ ] Crie uma função que retorne uma string a partir de uma lista e apague a lista junto
 - [ ] Crie uma função que gire uma lista n vezes nos dois sentidos
 - [ ] Crie uma função que inverta os pares da lista. Ex: (1 2 3 4) -> (2 1 4 3)
