@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   teste4.c                                           :+:      :+:    :+:   */
+/*   teste2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danbarbo <danbarbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 20:17:18 by danbarbo          #+#    #+#             */
-/*   Updated: 2023/11/21 03:58:57 by danbarbo         ###   ########.fr       */
+/*   Updated: 2023/11/21 03:13:52 by danbarbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "utils.h"
 #include <stdio.h>
 
-t_list	*add_front_range(int min, int max);
+int	is_empty(t_list *lst);
 
 int	main(void)
 {
-	int		test_num1 = 0;
-	int		test_num2 = 0;
 	t_list	*list;
 
-	list = add_front_range(test_num1, test_num2);
-	printf("add_front_range(%d, %d) => ", test_num1, test_num2);
+	list = populate_lst(0, 5);
+	printf("is_empty(list) = %d => list = ", is_empty(list));
 	print_list(list);
 	ft_lstclear(&list, &free_content);
 	return (0);

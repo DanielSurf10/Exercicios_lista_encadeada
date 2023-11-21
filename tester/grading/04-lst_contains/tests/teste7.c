@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   teste4.c                                           :+:      :+:    :+:   */
+/*   teste7.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danbarbo <danbarbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 20:17:18 by danbarbo          #+#    #+#             */
-/*   Updated: 2023/11/21 03:58:57 by danbarbo         ###   ########.fr       */
+/*   Updated: 2023/11/21 03:44:24 by danbarbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "utils.h"
 #include <stdio.h>
 
-t_list	*add_front_range(int min, int max);
+int	lst_contains(t_list *lst, int num);
 
 int	main(void)
 {
-	int		test_num1 = 0;
-	int		test_num2 = 0;
+	int		teste = 5;
 	t_list	*list;
 
-	list = add_front_range(test_num1, test_num2);
-	printf("add_front_range(%d, %d) => ", test_num1, test_num2);
+	list = populate_lst(0, 10);
+	free(list->next->next->content);
+	list->next->next->content = NULL;
+	printf("lst_contains(%d) = %d => list = ", teste, lst_contains(list, teste));
 	print_list(list);
 	ft_lstclear(&list, &free_content);
 	return (0);

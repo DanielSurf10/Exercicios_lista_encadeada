@@ -6,23 +6,22 @@
 /*   By: danbarbo <danbarbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 20:17:18 by danbarbo          #+#    #+#             */
-/*   Updated: 2023/11/21 03:58:57 by danbarbo         ###   ########.fr       */
+/*   Updated: 2023/11/21 03:18:13 by danbarbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "utils.h"
 #include <stdio.h>
 
-t_list	*add_front_range(int min, int max);
+t_list	*one_node(int num);
 
 int	main(void)
 {
-	int		test_num1 = 0;
-	int		test_num2 = 0;
+	int		test = -5;
 	t_list	*list;
 
-	list = add_front_range(test_num1, test_num2);
-	printf("add_front_range(%d, %d) => ", test_num1, test_num2);
+	list = one_node(test);
+	printf("one_node(%d) => ", test);
 	print_list(list);
 	ft_lstclear(&list, &free_content);
 	return (0);

@@ -1,6 +1,8 @@
 {
 	"C_Cpp.errorSquiggles": "disabled",
 	"files.associations": {
-		"linked_list.h": "c"
+		"linked_list.h": "c",
+		"stdio.h": "c",
+		"utils.h": "c"
 	}
 }
