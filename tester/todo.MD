@@ -4,11 +4,11 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 
 ### Básicos - percorrer a lista - leitura da lista
 
-- [X] Crie uma função is_empty que retorna 1 se a lista estiver vazia e 0 caso contrário
+- [X] Crie uma função que retorna 1 se a lista estiver vazia e 0 caso contrário.
 - [X] Escreva uma função que crie uma lista com um único nó contendo um inteiro fornecido como parâmetro.
 - [X] Crie uma função que receba como parâmetro dois inteiro e crie uma lista com dois nós contendo esses dois inteiros
-- [ ] Implemente uma função que verifica se um determinado conteúdo existe na lista. Retorna 1 se encontrado, 0 caso contrário.
-- [ ] Implemente uma função ft_lst_search que recebe a lista e um conteúdo a ser buscado. A função deve retornar o primeiro nó que contém o conteúdo ou NULL se não encontrado.
+- [X] Implemente uma função que verifica se um determinado conteúdo existe na lista. Retorna 1 se encontrado, 0 caso contrário.
+- [ ] Implemente uma função que recebe uma lista e um conteúdo a ser buscado. A função deve retornar o primeiro nó que contém o conteúdo ou NULL se não encontrado.
 - [ ] Crie uma função ft_lstcount que conta quantas vezes um determinado conteúdo aparece na lista.
 - [ ] Crie uma função que retorne o índice de um determinado valor, ou o tamanho da lista caso não seja encontrado.
 - [ ] Crie uma função que cheque se a lista é palindroma ou não
@@ -33,7 +33,7 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 - [ ] Crie uma função que inverta os pares da lista. Ex: (1 2 3 4) -> (2 1 4 3)
 - [ ] Crie uma função que encontre e remova um loop em uma lista
 - [ ] Crie uma função que remova todos os valores acima de um valor X
-
+- [ ] Crie uma função que remova todos os nós com conteúdo NULL
 
 ### Avançados - Cria novas listas - Criação de novas listas
 

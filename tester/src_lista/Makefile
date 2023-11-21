@@ -6,14 +6,14 @@
 #    By: danbarbo <danbarbo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/16 09:12:36 by danbarbo          #+#    #+#              #
-#    Updated: 2023/11/16 09:26:25 by danbarbo         ###   ########.fr        #
+#    Updated: 2023/11/21 04:00:33 by danbarbo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 	= ../linked_list.a
 CC		= cc
 FLAGS	= -Wall -Wextra -Werror -c
-INCLUDE	= ..
+INCLUDE	= ../include
 SRC		= ft_lstadd_back.c \
 			ft_lstadd_front.c \
 			ft_lstclear.c \
