@@ -3,8 +3,7 @@ import subprocess
 
 all_ok = True
 subjects = []
-# valgrind = 'valgrind -q --leak-check=full --show-leak-kinds=all'
-valgrind = ''
+valgrind = 'valgrind -q --leak-check=full --show-leak-kinds=all'
 utils = 'tester/utils/utils.c tester/linked_list.a'
 include = 'tester/include'
 exam = sorted(os.listdir('tester/exam'))
@@ -69,30 +68,27 @@ for main in tests:
 		all_ok = False
 		continue
 
-	result_original = os.system('tester/tmp/original > tester/tmp/original.out')
-	result_for_test = os.system(f'{valgrind} tester/tmp/for_test > tester/tmp/for_test.out')
+	result_original = subprocess.run('tester/tmp/original', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+	result_for_test = subprocess.run(f'{valgrind} tester/tmp/for_test', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
-	with open('tester/tmp/original.out', 'r') as arq_original:
-		read_original = arq_original.read()
-
-	with open('tester/tmp/for_test.out', 'r') as arq_for_test:
-		read_for_test = arq_for_test.read()
-
-	if (read_original == read_for_test and result_for_test == 0):
+	if (result_original.stdout == result_for_test.stdout and result_for_test.returncode == 0 and result_for_test.stderr == ''):
 		print('ok')
 	else:
-		print('ko')
+		if (result_for_test.stderr != ''):
+			print('ko_leak')
+		else:
+			print('ko')
 		all_ok = False
 
 		with open(f'trace/{exam[choice]}/trace_errors', 'a') as arq:
 			arq.write(f'Test:		{main}\n')
-			arq.write(f'Expected:	{read_original}')
-			arq.write(f'Yours:		{read_for_test}\n')
+			arq.write(f'Expected:	{result_for_test.stdout}')
+			arq.write(f'Yours:		{result_for_test.returncode}\n')
 
 	with open(f'trace/{exam[choice]}/trace_all', 'a') as arq:
 		arq.write(f'Test:		{main}\n')
-		arq.write(f'Expected:	{read_original}')
-		arq.write(f'Yours:		{read_for_test}\n')
+		arq.write(f'Expected:	{result_for_test.stdout}')
+		arq.write(f'Yours:		{result_for_test.returncode}\n')
 
 print('-' * 50)
 
