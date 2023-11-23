@@ -7,6 +7,7 @@ subjects = []
 valgrind = 'valgrind -q --leak-check=full --show-leak-kinds=all'
 utils = 'tester/utils/utils.c tester/linked_list.a'
 include = 'tester/include'
+flags = '-Wall -Wextra -Werror'
 exam = sorted(os.listdir('tester/exam'))
 
 for a in exam:
@@ -53,14 +54,14 @@ os.system(f'echo -n "" > trace/{exam[choice]}/trace_all')
 
 print('compiling: ', end='')
 
-compile_original = f'cc -I {include} {original_file} tester/grading/{exam[choice]}/main.c {utils} -o tester/tmp/original'
-compile_for_test = f'cc -I {include} {for_test_file} tester/grading/{exam[choice]}/main.c {utils} -o tester/tmp/for_test'
+compile_original = f'cc {flags} -I {include} {original_file} tester/grading/{exam[choice]}/main.c {utils} -o tester/tmp/original'
+compile_for_test = f'cc {flags} -I {include} {for_test_file} tester/grading/{exam[choice]}/main.c {utils} -o tester/tmp/for_test'
 
 result_original = subprocess.run(compile_original, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 result_for_test = subprocess.run(compile_for_test, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
 if (result_for_test.returncode != 0):
-	print("compilation error")
+	print('compilation error')
 	all_ok = False
 else:
 	print('ok')
@@ -115,4 +116,4 @@ if (all_ok):
 else:
 	print('Não funcionou!')
 
-os.system('rm -rf tester/tmp')
+# os.system('rm -rf tester/tmp')
