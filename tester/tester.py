@@ -43,7 +43,6 @@ if choice == -1:
 
 	exit()
 
-# tests = sorted(os.listdir(f'tester/grading/{exam[choice]}/tests'))
 original_file = f'tester/grading/{exam[choice]}/{subjects[choice]}.c'
 for_test_file = f'rendu/{exam[choice]}/{subjects[choice]}.c'
 
@@ -52,52 +51,62 @@ os.system(f'mkdir -p trace/{exam[choice]}')
 os.system(f'echo -n "" > trace/{exam[choice]}/trace_errors')
 os.system(f'echo -n "" > trace/{exam[choice]}/trace_all')
 
-with open(f'tester/grading/{exam[choice]}/tests.txt') as arq:
-	tests = arq.read().split('\n')[:-1]
+print('compiling: ', end='')
 
-for i in range(len(tests)):
-	print(f'{i:>2}', end=' : ')
+compile_original = f'cc -I {include} {original_file} tester/grading/{exam[choice]}/main.c {utils} -o tester/tmp/original'
+compile_for_test = f'cc -I {include} {for_test_file} tester/grading/{exam[choice]}/main.c {utils} -o tester/tmp/for_test'
 
-	command_original = f'cc -I {include} {original_file} tester/grading/{exam[choice]}/main.c {utils} -o tester/tmp/original'
-	command_for_test = f'cc -I {include} {for_test_file} tester/grading/{exam[choice]}/main.c {utils} -o tester/tmp/for_test'
+result_original = subprocess.run(compile_original, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+result_for_test = subprocess.run(compile_for_test, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
-# for main in tests:
-# 	print(main, end=' : ')
-#
-# 	tester_main = f'tester/grading/{exam[choice]}/tests/{main}'
-#
-# 	command_original = f'cc -I {include} {original_file} {tester_main} {utils} -o tester/tmp/original'
-# 	command_for_test = f'cc -I {include} {for_test_file} {tester_main} {utils} -o tester/tmp/for_test'
-#
-# 	result_original = subprocess.run(command_original, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-# 	result_for_test = subprocess.run(command_for_test, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-#
-# 	if (result_for_test.returncode != 0 or result_original.returncode != 0):
-# 		print("compilation error", result_for_test.__dict__)
-# 		all_ok = False
-# 		continue
-#
-# 	result_original = subprocess.run('tester/tmp/original', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-# 	result_for_test = subprocess.run(f'{valgrind} tester/tmp/for_test', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-#
-# 	if (result_original.stdout == result_for_test.stdout and result_for_test.returncode == 0 and result_for_test.stderr == ''):
-# 		print('ok')
-# 	else:
-# 		if (result_for_test.stderr != ''):
-# 			print('ko_leak')
-# 		else:
-# 			print('ko')
-# 		all_ok = False
-#
-# 		with open(f'trace/{exam[choice]}/trace_errors', 'a') as arq:
-# 			arq.write(f'Test:		{main}\n')
-# 			arq.write(f'Expected:	{result_for_test.stdout}')
-# 			arq.write(f'Yours:		{result_for_test.returncode}\n')
-#
-# 	with open(f'trace/{exam[choice]}/trace_all', 'a') as arq:
-# 		arq.write(f'Test:		{main}\n')
-# 		arq.write(f'Expected:	{result_for_test.stdout}')
-# 		arq.write(f'Yours:		{result_for_test.returncode}\n')
+if (result_for_test.returncode != 0):
+	print("compilation error")
+	all_ok = False
+else:
+	print('ok')
+
+if all_ok:
+	with open(f'tester/grading/{exam[choice]}/tests.txt') as arq:
+		read_test = arq.read().strip()
+
+	tests = read_test.split('\n')
+
+	for i in range(len(tests)):
+		print(f'test {i:>2}', end=' : ')
+
+		test = tests[i].split(':')[1].strip()
+
+		result_original = subprocess.run(f'tester/tmp/original {test}', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+		result_for_test = subprocess.run(f'{valgrind} tester/tmp/for_test {test}', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+		fd_trace_all = open(f'trace/{exam[choice]}/trace_all', 'a')
+		fd_trace_all.write(f'Test:		teste {i}\n')
+		fd_trace_all.write(f'Expected:	{result_original.stdout}')
+		fd_trace_all.write(f'Yours:		{result_for_test.stdout}')
+		fd_trace_all.write('status:		')
+
+		if (result_original.stdout == result_for_test.stdout and result_for_test.returncode == 0 and result_for_test.stderr == ''):
+			print('ok')
+			fd_trace_all.write('ok\n\n')
+		else:
+			fd_trace_error = open(f'trace/{exam[choice]}/trace_errors', 'a')
+			fd_trace_error.write(f'Test:		teste {i}\n')
+			fd_trace_error.write(f'Expected:	{result_original.stdout}')
+			fd_trace_error.write(f'Yours:		{result_for_test.stdout}')
+			fd_trace_error.write('status:		')
+
+			if (result_for_test.stderr != ''):
+				print('ko_leak')
+				fd_trace_all.write('ko_leak\n\n')
+				fd_trace_error.write('ko_leak\n\n')
+			else:
+				print('ko')
+				fd_trace_all.write('ko\n\n')
+				fd_trace_error.write('ko\n\n')
+			all_ok = False
+			fd_trace_error.close()
+
+		fd_trace_all.close()
 
 print('-' * 50)
 
