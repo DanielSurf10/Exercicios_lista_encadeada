@@ -110,7 +110,11 @@ if all_ok:
 			fd_trace_error.write(f'Yours:		{result_for_test.stdout}')
 			fd_trace_error.write('status:		')
 
-			if (result_for_test.stderr != ''):
+			if (result_for_test.returncode != 0):
+				print('ko_seg_falt')
+				fd_trace_all.write('ko_seg_falt\n\n')
+				fd_trace_error.write('ko_seg_falt\n\n')
+			elif (result_for_test.stderr != ''):
 				print('ko_leak')
 				fd_trace_all.write('ko_leak\n\n')
 				fd_trace_error.write('ko_leak\n\n')

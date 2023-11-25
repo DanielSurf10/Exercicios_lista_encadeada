@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.h                                            :+:      :+:    :+:   */
+/*   ft_lst_count.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danbarbo <danbarbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/20 23:27:27 by danbarbo          #+#    #+#             */
-/*   Updated: 2023/11/25 17:16:30 by danbarbo         ###   ########.fr       */
+/*   Created: 2023/11/25 17:03:12 by danbarbo          #+#    #+#             */
+/*   Updated: 2023/11/25 17:56:00 by danbarbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_H
-# define UTILS_H
+#include "linked_list.h"
 
-# include "linked_list.h"
-# include <stdio.h>
-# include <string.h>
+int	ft_lst_count(t_list *lst, int num)
+{
+	int		count;
+	t_list	*aux;
 
-void	print_list(t_list *list);
-void	free_content(void *content);
-t_list	*populate_lst(int min, int max);
-void	set_index(t_list *list);
-t_list	*_create_node(int num);
-
-#endif
+	count = 0;
+	aux = lst;
+	while (aux)
+	{
+		if (aux->content && *((int *) (aux->content)) == num)
+			count++;
+		aux = aux->next;
+	}
+	return (count);
+}

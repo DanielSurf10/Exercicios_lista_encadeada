@@ -6,8 +6,8 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 
 - [X] Crie uma função que retorna 1 se a lista estiver vazia e 0 caso contrário.
 - [X] Implemente uma função que verifica se um determinado conteúdo existe na lista. Retorna 1 se encontrado, 0 caso contrário.
-- [ ] Implemente uma função que recebe uma lista e um conteúdo a ser buscado. A função deve retornar o primeiro nó que contém o conteúdo ou NULL se não encontrado.
-- [ ] Crie uma função ft_lstcount que conta quantas vezes um determinado conteúdo aparece na lista.
+- [X] Implemente uma função que recebe uma lista e um conteúdo a ser buscado. A função deve retornar o primeiro nó que contém o conteúdo ou NULL se não encontrado.
+- [X] Crie uma função ft_lst_count que conta quantas vezes um determinado conteúdo aparece na lista.
 - [ ] Crie uma função que retorne o índice de um determinado valor, ou o tamanho da lista caso não seja encontrado.
 - [ ] Crie uma função que cheque se a lista é palindroma ou não
 - [ ] Crie uma função que econtre um par o qual a soma é igual a um valor X. Ex: (1 2 3 4 5 6 7), X = 4 -> (1,3)

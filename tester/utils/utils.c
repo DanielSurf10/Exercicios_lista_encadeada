@@ -6,7 +6,7 @@
 /*   By: danbarbo <danbarbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 23:28:35 by danbarbo          #+#    #+#             */
-/*   Updated: 2023/11/25 15:00:38 by danbarbo         ###   ########.fr       */
+/*   Updated: 2023/11/25 17:17:21 by danbarbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,25 @@ t_list	*populate_lst(int min, int max)
 		else
 			i++;
 		size--;
+	}
+	return (list);
+}
+
+t_list	*_create_node(int num)
+{
+	int		*allocated;
+	t_list	*list;
+
+	allocated = (int *) malloc(sizeof(int));
+	if (!allocated)
+		return (NULL);
+	*allocated = num;
+	list = ft_lstnew(allocated);
+	if (!list)
+	{
+		free(allocated);
+		allocated = NULL;
+		return (NULL);
 	}
 	return (list);
 }

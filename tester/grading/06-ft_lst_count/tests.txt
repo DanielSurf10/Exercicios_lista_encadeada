@@ -1,0 +1,10 @@
+teste 1: 0 0
+teste 2: 1 0
+teste 3: 0 0 0
+teste 4: 0 1 2 3 4 5
+teste 5: 2 1 2 3 4 5
+teste 6: 5 1 2 5 5 5 3 2
+teste 7: 0
+teste 8: 0 0 1 2 NULL 3 4 NULL 0
+teste 9: 1 NULL 1 2 3
+teste 10: 5 NULL NULL NULL NULL
