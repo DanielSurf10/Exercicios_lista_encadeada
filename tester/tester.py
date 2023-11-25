@@ -70,10 +70,12 @@ result_original = subprocess.run(compile_original, shell=True, stdout=subprocess
 result_for_test = subprocess.run(compile_for_test, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
 if (result_for_test.returncode != 0):
-	print('compilation error', result_for_test.__dict__)
+	print('compilation error\n', result_for_test.stderr)
 	all_ok = False
 else:
 	print('ok')
+	print('-' * 50)
+
 
 if all_ok:
 	with open(f'tester/grading/{exam[choice]}/tests.txt') as arq:
@@ -127,5 +129,7 @@ if (all_ok):
 	print('Funcionou! :)')
 else:
 	print('Não funcionou!')
+
+print('-' * 50)
 
 os.system('rm -rf tester/tmp')
