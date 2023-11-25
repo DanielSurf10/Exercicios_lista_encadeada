@@ -3,7 +3,7 @@ import subprocess
 # import tester.utils.utils
 
 
-class SubjectTest:
+class UnitaryTest:
 	def __init__(self, test_line):
 		test = test_line.split(':')
 		self.name = test[0].strip()
@@ -70,7 +70,7 @@ result_original = subprocess.run(compile_original, shell=True, stdout=subprocess
 result_for_test = subprocess.run(compile_for_test, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
 if (result_for_test.returncode != 0):
-	print('compilation error')
+	print('compilation error', result_for_test.__dict__)
 	all_ok = False
 else:
 	print('ok')
@@ -79,12 +79,15 @@ if all_ok:
 	with open(f'tester/grading/{exam[choice]}/tests.txt') as arq:
 		read_test = arq.read().strip()
 
-	tests = read_test.split('\n')
+	tests_splited = read_test.split('\n')
 
-	for i in range(len(tests)):
-		test = SubjectTest(tests[i])
+	# size_line = len(max(tests, key=len))
+	# size_line = len(max([test.split(':')[0].strip() for test in tests], key=len))
+	tests = [UnitaryTest(test) for test in tests_splited]
+	size_line = len(max([test.name for test in tests], key=len))
 
-		print(f'{test.name}', end=' : ')
+	for test in tests:
+		print(f'{test.name.ljust(size_line)}', end=' : ')
 
 		result_original = subprocess.run(f'tester/tmp/original {test.test}', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 		result_for_test = subprocess.run(f'{valgrind} tester/tmp/for_test {test.test}', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)

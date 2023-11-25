@@ -43,7 +43,7 @@ class Tester:
 
         subject_tests = []
         for subject in tests:
-            subject_tests.append(SubjectTest(subject))
+            subject_tests.append(UnitaryTest(subject))
 
         for test in subject_tests:
             print(f'testing {test.name}: ', end='')
@@ -80,7 +80,7 @@ class Tester:
         # todo: verificar se o stdrr do valgrind é igual a 0
 
 
-class SubjectTest:
+class UnitaryTest:
     def __init__(self, test_line):
         test = test_line.split(':')
         self.name = test[0].strip()

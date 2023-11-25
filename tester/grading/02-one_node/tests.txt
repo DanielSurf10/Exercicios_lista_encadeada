@@ -1,0 +1,6 @@
+teste com 0: 0
+teste com 1: 1
+teste com 42: 42
+teste com -5: -5
+teste com INT_MAX: 2147483647
+teste com INT_MIN: -2147483648

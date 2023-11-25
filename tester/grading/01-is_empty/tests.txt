@@ -1,3 +1,3 @@
-teste com um nó			: 0 0
-teste com vários nós	: 0 5
-teste com a lista vazia	: 0
+teste com um nó: 0 0
+teste com vários nós: 0 5
+teste com a lista vazia: 0
