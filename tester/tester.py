@@ -2,6 +2,14 @@ import os
 import subprocess
 # import tester.utils.utils
 
+
+class SubjectTest:
+	def __init__(self, test_line):
+		test = test_line.split(':')
+		self.name = test[0].strip()
+		self.test = test[1].strip()
+
+
 all_ok = True
 subjects = []
 valgrind = 'valgrind -q --leak-check=full --show-leak-kinds=all'
@@ -40,6 +48,7 @@ if choice == -1:
 		os.system('make -C tester/src_lista all clean')
 	os.system('cp tester/linked_list.a rendu')
 
+	os.system('mkdir -p exam')
 	os.system('cp -rf tester/exam/* exam')
 
 	exit()
@@ -73,15 +82,15 @@ if all_ok:
 	tests = read_test.split('\n')
 
 	for i in range(len(tests)):
-		print(f'test {i:>2}', end=' : ')
+		test = SubjectTest(tests[i])
 
-		test = tests[i].split(':')[1].strip()
+		print(f'{test.name}', end=' : ')
 
-		result_original = subprocess.run(f'tester/tmp/original {test}', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-		result_for_test = subprocess.run(f'{valgrind} tester/tmp/for_test {test}', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+		result_original = subprocess.run(f'tester/tmp/original {test.test}', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+		result_for_test = subprocess.run(f'{valgrind} tester/tmp/for_test {test.test}', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
 		fd_trace_all = open(f'trace/{exam[choice]}/trace_all', 'a')
-		fd_trace_all.write(f'Test:		teste {i}\n')
+		fd_trace_all.write(f'Test:		{test.name}\n')
 		fd_trace_all.write(f'Expected:	{result_original.stdout}')
 		fd_trace_all.write(f'Yours:		{result_for_test.stdout}')
 		fd_trace_all.write('status:		')
@@ -91,7 +100,7 @@ if all_ok:
 			fd_trace_all.write('ok\n\n')
 		else:
 			fd_trace_error = open(f'trace/{exam[choice]}/trace_errors', 'a')
-			fd_trace_error.write(f'Test:		teste {i}\n')
+			fd_trace_error.write(f'Test:		{test.name}\n')
 			fd_trace_error.write(f'Expected:	{result_original.stdout}')
 			fd_trace_error.write(f'Yours:		{result_for_test.stdout}')
 			fd_trace_error.write('status:		')
@@ -116,4 +125,4 @@ if (all_ok):
 else:
 	print('Não funcionou!')
 
-# os.system('rm -rf tester/tmp')
+os.system('rm -rf tester/tmp')
