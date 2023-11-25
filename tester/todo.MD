@@ -5,8 +5,6 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 ### Básicos - percorrer a lista - leitura da lista
 
 - [X] Crie uma função que retorna 1 se a lista estiver vazia e 0 caso contrário.
-- [X] Escreva uma função que crie uma lista com um único nó contendo um inteiro fornecido como parâmetro.
-- [X] Crie uma função que receba como parâmetro dois inteiro e crie uma lista com dois nós contendo esses dois inteiros
 - [X] Implemente uma função que verifica se um determinado conteúdo existe na lista. Retorna 1 se encontrado, 0 caso contrário.
 - [ ] Implemente uma função que recebe uma lista e um conteúdo a ser buscado. A função deve retornar o primeiro nó que contém o conteúdo ou NULL se não encontrado.
 - [ ] Crie uma função ft_lstcount que conta quantas vezes um determinado conteúdo aparece na lista.
@@ -17,6 +15,8 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 
 ### Intermediários - percorrer e mudar a lista - manipulação da lista
 
+- [X] Escreva uma função que crie uma lista com um único nó contendo um inteiro fornecido como parâmetro.
+- [X] Crie uma função que receba como parâmetro dois inteiro e crie uma lista com dois nós contendo esses dois inteiros
 - [ ] Crie uma função ft_lst_insert que insira um novo elemento no meio da lista, após um elemento específico.
 - [ ] Crie uma função ft_lst_replace que substitui o conteúdo de um nó específico por um novo conteúdo fornecido.
 - [ ] Crie uma função que faz um swap de 2 elementos

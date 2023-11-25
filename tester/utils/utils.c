@@ -6,7 +6,7 @@
 /*   By: danbarbo <danbarbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 23:28:35 by danbarbo          #+#    #+#             */
-/*   Updated: 2023/11/20 23:37:59 by danbarbo         ###   ########.fr       */
+/*   Updated: 2023/11/25 15:00:38 by danbarbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,4 +59,20 @@ t_list	*populate_lst(int min, int max)
 		size--;
 	}
 	return (list);
+}
+
+void	set_index(t_list *list)
+{
+	(void)list;
+// 	int		i;
+// 	t_list	*node;
+//
+// 	i = 0;
+// 	node = list;
+// 	while (node)
+// 	{
+// 		node->index = i;
+// 		node = node->next;
+// 		i++;
+// 	}
 }
