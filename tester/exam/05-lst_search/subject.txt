@@ -1,5 +1,5 @@
-Nome do exercício	: ft_lst_search
-Arquivos esperados	: ft_lst_search.c
+Nome do exercício	: lst_search
+Arquivos esperados	: lst_search.c
 Funções permitidas	:
 --------------------------------------------------------------------------------
 
@@ -11,4 +11,4 @@ Considere que a lista é apenas de inteiros.
 
 A sua função deve ser declarada da seguinte maneira:
 
-t_list	*ft_lst_search(t_list *lst, int num);
+t_list	*lst_search(t_list *lst, int num);

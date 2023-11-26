@@ -1,5 +1,5 @@
-Nome do exercício	: ft_lst_count
-Arquivos esperados	: ft_lst_count.c
+Nome do exercício	: lst_count
+Arquivos esperados	: lst_count.c
 Funções permitidas	:
 --------------------------------------------------------------------------------
 
@@ -10,4 +10,4 @@ Considere que a lista é apenas de inteiros.
 
 A sua função deve ser prototipada da seguinte maneira:
 
-int	ft_lst_count(t_list *lst, int num);
+int	lst_count(t_list *lst, int num);

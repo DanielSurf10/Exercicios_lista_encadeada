@@ -5,20 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: danbarbo <danbarbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/25 17:10:36 by danbarbo          #+#    #+#             */
-/*   Updated: 2023/11/25 18:03:14 by danbarbo         ###   ########.fr       */
+/*   Created: 2023/11/25 15:58:39 by danbarbo          #+#    #+#             */
+/*   Updated: 2023/11/25 22:13:31 by danbarbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "utils.h"
 
-int	ft_lst_count(t_list *lst, int num);
+t_list	*lst_search(t_list *lst, int num);
 
 int	main(int argc, char *argv[])
 {
 	int		test = 0;
 	int		i = 2;
+	int		num_found = 0;
 	t_list	*list = NULL;
+	t_list	*found;
 
 	if (argc > 1)		// No argv[1] vai ficar o número a ser testado
 		test = atoi(argv[1]);
@@ -33,8 +35,17 @@ int	main(int argc, char *argv[])
 			i++;
 		}
 	}
-	printf("ft_lst_count(list, %d) = %d => list = ", test, ft_lst_count(list, test));
+	found = lst_search(list, test);
+	num_found = found ? *((int *) found->content) : 0;
+	printf("ft_lst_search(list, %d) = ", test);
+	if (found)
+		printf("%d\n", num_found);
+	else
+		printf("%s\n", "( NULL )");
+	printf("\t\t\t\tlist:\t");
 	print_list(list);
+	printf("\t\t\t\tfound:\t");
+	print_list(found);
 	ft_lstclear(&list, &free_content);
 	return (0);
 }

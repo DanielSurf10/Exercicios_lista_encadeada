@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst_search.c                                    :+:      :+:    :+:   */
+/*   lst_count.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: danbarbo <danbarbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/20 22:11:50 by danbarbo          #+#    #+#             */
-/*   Updated: 2023/11/20 22:42:59 by danbarbo         ###   ########.fr       */
+/*   Created: 2023/11/25 17:03:12 by danbarbo          #+#    #+#             */
+/*   Updated: 2023/11/25 22:17:27 by danbarbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "linked_list.h"
 
-t_list	*ft_lst_search(t_list *lst, int num)
+int	lst_count(t_list *lst, int num)
 {
-	while (lst)
+	int		count;
+	t_list	*aux;
+
+	count = 0;
+	aux = lst;
+	while (aux)
 	{
-		if (lst->content && *((int *) lst->content) == num)
-			return (lst);
-		lst = lst->next;
+		if (aux->content && *((int *) (aux->content)) == num)
+			count++;
+		aux = aux->next;
 	}
-	return (NULL);
+	return (count);
 }
