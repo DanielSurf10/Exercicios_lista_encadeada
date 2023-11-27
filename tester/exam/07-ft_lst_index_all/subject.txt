@@ -1,0 +1,36 @@
+Nome do exercício	: ft_lst_index_all
+Arquivos esperados	: ft_lst_index_all.c
+Funções permitidas	:
+--------------------------------------------------------------------------------
+
+Crie uma função que recebe um ponteiro para o primeiro nó de uma lista
+e um inteiro.
+A função deve retornar o index do primeiro nó que contém o inteiro ou o
+tamanho da lista (ft_lst_size(lst)) caso não seja econtrado.
+Caso em algum nó, ao invés de um ponteiro para inteiro, tiver um ponteiro que
+aponta em NULL, a função deve esse nó.
+
+Exemplos:
+
+lista => { (0) } -> { (1) } -> { (2) } -> NULL
+
+- Com (0) a sua função deve retornar: 1
+- Com (2) a sua função deve retornar: 3
+- Com (5) a sua função deve retornar: 3
+
+lista_vazia => NULL
+
+- Com (0) a sua função deve retornar: 0
+- Com (2) a sua função deve retornar: 0
+- Com (5) a sua função deve retornar: 0
+
+lista => { (0) } -> { (NULL) } -> { (2) } -> NULL
+
+- Com (0) a sua função deve retornar: 1
+- Com (2) a sua função deve retornar: 3
+- Com (5) a sua função deve retornar: 3
+
+
+A sua função deve ser prototipada da seguinte maneira:
+
+int	ft_lst_index_all(t_list *lst, int num);

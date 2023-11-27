@@ -6,11 +6,20 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 
 - [X] Crie uma função que retorna 1 se a lista estiver vazia e 0 caso contrário.
 - [X] Implemente uma função que verifica se um determinado conteúdo existe na lista. Retorna 1 se encontrado, 0 caso contrário.
-- [X] Implemente uma função que recebe uma lista e um conteúdo a ser buscado. A função deve retornar o primeiro nó que contém o conteúdo ou NULL se não encontrado.
+- [ ] Crie uma função que retorne o último elemento da lista.
+- [X] Implemente uma função que recebe uma lista e um inteiro a ser buscado. A função deve retornar o primeiro nó que contém o conteúdo ou NULL se não encontrado.
 - [X] Crie uma função ft_lst_count que conta quantas vezes um determinado conteúdo aparece na lista.
-- [ ] Crie uma função que retorne o índice de um determinado valor, ou o tamanho da lista caso não seja encontrado.
-- [ ] Crie uma função que cheque se a lista é palindroma ou não
-- [ ] Crie uma função que econtre um par o qual a soma é igual a um valor X. Ex: (1 2 3 4 5 6 7), X = 4 -> (1,3)
+- [X] Crie uma função ft_lst_index_all que retorne o índice de um determinado valor na lista, ou o tamanho da lista caso não seja encontrado.
+- [ ] Crie uma função que checa se a lista é palindroma ou não.
+- [ ] Crie uma função que econtre um par cuja a soma é igual a um valor X. Ex: (1 2 3 4 5 6 7), X = 4 -> (1,3)
+- [ ] Escreva uma função ft_lst_sum que percorre a lista e retorna a soma de todos os elementos.
+- [ ] Implemente uma função ft_lst_count_odd que conta o número de elementos ímpares na lista.
+- [ ] Implemente uma função ft_lst_count_even que conta o número de elementos pares na lista.
+- [ ] Escreva uma função ft_lst_average que calcula a média dos valores na lista.
+- [ ] Escreva uma função ft_lst_max_value que retorna o nó que contém o valor máximo na lista.
+- [ ] Escreva uma função ft_lst_min_value que retorna o nó que contém o valor máximo na lista.
+- [ ] Escreva uma função ft_lst_sub_lst que verifica se uma determinada sequência de elementos aparece na lista. Tipo como a função substr, mas ao invés de string, o big e o little são listas encadeadas.
+- [ ] Escreva uma função que compare 2 listas, assim como a strcmp.
 
 
 ### Intermediários - percorrer e mudar a lista - manipulação da lista
@@ -20,6 +29,8 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 - [ ] Crie uma função ft_lst_insert que insira um novo elemento no meio da lista, após um elemento específico.
 - [ ] Crie uma função ft_lst_replace que substitui o conteúdo de um nó específico por um novo conteúdo fornecido.
 - [ ] Crie uma função que faz um swap de 2 elementos
+- [ ] Crie uma função que apague o primeiro nó da lista.
+- [ ] Crie uma função que apague o último nó da lista.
 - [ ] Implemente uma função ft_lst_remove_at que remove o nó em um índice específico da lista.
 - [ ] Crie uma função que concatene duas listas
 - [ ] Crie uma função lst_reverse que inverte a ordem da lista
@@ -47,4 +58,4 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 - [ ] Crie uma função que faça uma cópia da lista com a ordem embaralhada
 - [ ] Crie uma função que receba 2 listas. Cada nó contém um inteiro. A função deve retornar uma nova lista contendo a soma de cada nó respectivo.
 - [ ] Crie uma função que receba 2 listas e crie uma nova a partir da intersecção delas
-- [ ] Escreva um programa C para mesclar nós alternativos de duas listas vinculadas individualmente. Ex: lst1 (7 3 5 9), lst2 (2 8 4 6) -> (7 2 3 8 5 4 9 6)
+- [ ] Escreva uma função ft_merge que mescle nós alternativos de duas listas vinculadas individualmente. Ex: lst1 (1 3 5 7 9), lst2 (2 4 6 8) -> (1 2 3 4 5 6 7 8 9)
