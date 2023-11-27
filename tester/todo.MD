@@ -9,7 +9,7 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 - [ ] Crie uma função que retorne o último elemento da lista.
 - [X] Implemente uma função que recebe uma lista e um inteiro a ser buscado. A função deve retornar o primeiro nó que contém o conteúdo ou NULL se não encontrado.
 - [X] Crie uma função ft_lst_count que conta quantas vezes um determinado conteúdo aparece na lista.
-- [X] Crie uma função ft_lst_index_all que retorne o índice de um determinado valor na lista, ou o tamanho da lista caso não seja encontrado.
+- [X] Crie uma função ft_lst_index_all que retorne o índice + 1 de um determinado valor na lista, ou o tamanho da lista caso não seja encontrado.
 - [ ] Crie uma função que checa se a lista é palindroma ou não.
 - [ ] Crie uma função que econtre um par cuja a soma é igual a um valor X. Ex: (1 2 3 4 5 6 7), X = 4 -> (1,3)
 - [ ] Escreva uma função ft_lst_sum que percorre a lista e retorna a soma de todos os elementos.
