@@ -3,6 +3,7 @@ lst_contains
 lst_search
 lst_count
 lst_index_all
+lst_sum
 one_node
 two_nodes
 add_front_range

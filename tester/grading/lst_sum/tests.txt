@@ -1,0 +1,26 @@
+teste 1:
+teste 2: 0
+teste 3: 1
+teste 4: 0 1
+teste 5: 1 1
+teste 6: 0 1 2
+teste 7: 1 2 3
+teste 8: 0 0 0 0 0
+teste 9: 1 1 1 1 1
+teste 10: 1 0 1
+teste 11: 10 -1 -5
+teste 12: -10
+teste 13: 10 -10
+teste 14: 5 -7
+teste 15: -5 -7
+teste 16: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+teste 17: NULL
+teste 18: NULL NULL
+teste 19: 1 NULL
+teste 20: 1 NULL 1
+teste 21: NULL 1
+teste 22: NULL NULL 1
+teste 23: 1 NULL NULL
+teste 24: 1 1 1 1 1 NULL
+teste 25: NULL 1 1 1 1 1
+teste 26: 1 1 NULL 1 1

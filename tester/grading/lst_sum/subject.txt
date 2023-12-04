@@ -1,0 +1,15 @@
+Nome do exercício	: lst_sum
+Arquivos esperados	: lst_sum.c
+Funções permitidas	:
+--------------------------------------------------------------------------------
+
+Crie uma função que recebe um ponteiro para o primeiro nó de uma lista encadeada
+e faça a soma de todos os nós.
+Considere que uma lista que contém apenas inteiros.
+Caso em algum nó, ao invés de um ponteiro para inteiro, tiver um ponteiro que
+aponta em NULL, a função deve pular esses nós.
+
+
+A sua função deve ser declarada da seguinte maneira:
+
+t_list	*lst_sum(t_list *lst);
