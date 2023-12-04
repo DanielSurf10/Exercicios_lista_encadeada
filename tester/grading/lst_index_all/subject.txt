@@ -1,0 +1,37 @@
+Nome do exercício	: lst_index_all
+Arquivos esperados	: lst_index_all.c
+Funções permitidas	:
+--------------------------------------------------------------------------------
+
+Crie uma função que recebe um ponteiro que aponta para o primeiro nó de uma
+lista e um inteiro.
+A função deve retornar o índice + 1 do primeiro nó que contém o inteiro ou o
+tamanho da lista (ft_lst_size(lst)) caso não seja econtrado.
+Caso em algum nó, ao invés de um ponteiro para inteiro, tiver um ponteiro que
+aponta em NULL, a função deve contar esse nó também.
+Função útil na GNL (Get Next Line) caso for fazer com lista encadeada.
+
+Exemplos:
+
+lista => { (0) } -> { (1) } -> { (2) } -> NULL
+
+- Com (0) a sua função deve retornar: 1
+- Com (2) a sua função deve retornar: 3
+- Com (5) a sua função deve retornar: 3
+
+lista_vazia => NULL
+
+- Com (0) a sua função deve retornar: 0
+- Com (2) a sua função deve retornar: 0
+- Com (5) a sua função deve retornar: 0
+
+lista_com_null => { (0) } -> { (NULL) } -> { (2) } -> NULL
+
+- Com (0) a sua função deve retornar: 1
+- Com (2) a sua função deve retornar: 3
+- Com (5) a sua função deve retornar: 3
+
+
+A sua função deve ser prototipada da seguinte maneira:
+
+int	lst_index_all(t_list *lst, int num);

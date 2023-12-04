@@ -1,0 +1,14 @@
+Nome do exercício	: lst_search
+Arquivos esperados	: lst_search.c
+Funções permitidas	:
+--------------------------------------------------------------------------------
+
+Implemente uma função que recebe uma lista e um conteúdo a ser buscado.
+A função deve retornar o primeiro nó que contém o conteúdo
+ou NULL se não encontrado.
+Considere que a lista é apenas de inteiros.
+
+
+A sua função deve ser declarada da seguinte maneira:
+
+t_list	*lst_search(t_list *lst, int num);

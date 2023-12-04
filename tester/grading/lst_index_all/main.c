@@ -6,13 +6,13 @@
 /*   By: danbarbo <danbarbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/27 01:08:56 by danbarbo          #+#    #+#             */
-/*   Updated: 2023/11/27 01:50:09 by danbarbo         ###   ########.fr       */
+/*   Updated: 2023/12/04 01:02:51 by danbarbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "utils.h"
 
-int	ft_lst_index_all(t_list *lst, int num);
+int	lst_index_all(t_list *lst, int num);
 
 int	main(int argc, char *argv[])
 {
@@ -33,7 +33,7 @@ int	main(int argc, char *argv[])
 			i++;
 		}
 	}
-	printf("ft_lst_index_all(list, %d) = %d => list = ", test, ft_lst_index_all(list, test));
+	printf("lst_index_all(list, %d) = %d => list = ", test, lst_index_all(list, test));
 	print_list(list);
 	ft_lstclear(&list, &free_content);
 	return (0);
