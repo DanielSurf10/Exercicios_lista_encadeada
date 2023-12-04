@@ -6,13 +6,13 @@
 /*   By: danbarbo <danbarbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 23:28:35 by danbarbo          #+#    #+#             */
-/*   Updated: 2023/11/25 17:17:21 by danbarbo         ###   ########.fr       */
+/*   Updated: 2023/12/04 17:57:52 by danbarbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "utils.h"
 
-void	print_list(t_list *list)
+void	_print_list(t_list *list)
 {
 	t_list	*node;
 
@@ -28,12 +28,12 @@ void	print_list(t_list *list)
 	printf("NULL\n");
 }
 
-void	free_content(void *content)
+void	_free_content(void *content)
 {
 	free(content);
 }
 
-t_list	*populate_lst(int min, int max)
+t_list	*_populate_lst(int min, int max)
 {
 	int		i;
 	int		size;
@@ -80,7 +80,7 @@ t_list	*_create_node(int num)
 	return (list);
 }
 
-void	set_index(t_list *list)
+void	_set_index(t_list *list)
 {
 	(void)list;
 // 	int		i;

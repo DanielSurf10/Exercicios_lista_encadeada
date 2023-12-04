@@ -6,7 +6,7 @@
 /*   By: danbarbo <danbarbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 16:42:58 by danbarbo          #+#    #+#             */
-/*   Updated: 2023/11/23 00:13:58 by danbarbo         ###   ########.fr       */
+/*   Updated: 2023/12/04 17:57:44 by danbarbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ int	main(int argv, char *argc[])
 	{
 		num1 = atoi(argc[1]);
 		num2 = atoi(argc[2]);
-		list = populate_lst(num1, num2);
+		list = _populate_lst(num1, num2);
 	}
 	printf("is_empty(list) = %d => list = ", is_empty(list));
-	print_list(list);
-	ft_lstclear(&list, &free_content);
+	_print_list(list);
+	ft_lstclear(&list, &_free_content);
 	return (0);
 }

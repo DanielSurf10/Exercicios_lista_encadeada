@@ -6,7 +6,7 @@
 /*   By: danbarbo <danbarbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 17:10:36 by danbarbo          #+#    #+#             */
-/*   Updated: 2023/11/25 22:17:49 by danbarbo         ###   ########.fr       */
+/*   Updated: 2023/12/04 17:57:15 by danbarbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	main(int argc, char *argv[])
 		}
 	}
 	printf("ft_lst_count(list, %d) = %d => list = ", test, lst_count(list, test));
-	print_list(list);
-	ft_lstclear(&list, &free_content);
+	_print_list(list);
+	ft_lstclear(&list, &_free_content);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: danbarbo <danbarbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 13:54:23 by danbarbo          #+#    #+#             */
-/*   Updated: 2023/11/25 14:05:37 by danbarbo         ###   ########.fr       */
+/*   Updated: 2023/12/04 17:57:15 by danbarbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	}
 	list = two_nodes(test_n1, test_n2);
 	printf("two_nodes(%d, %d) => ", test_n1, test_n2);
-	print_list(list);
-	ft_lstclear(&list, &free_content);
+	_print_list(list);
+	ft_lstclear(&list, &_free_content);
 	return (0);
 }
