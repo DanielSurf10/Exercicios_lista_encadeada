@@ -1,7 +1,6 @@
-exam
-!tester/exam
+exam/*
 rendu
 trace
-tester/linked_list.a
+linked_list.a
 testes
 a.out

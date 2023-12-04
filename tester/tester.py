@@ -13,8 +13,8 @@ class UnitaryTest:
 all_ok = True
 subjects = []
 valgrind = 'valgrind -q --leak-check=full --show-leak-kinds=all'
-utils = 'tester/utils/utils.c tester/linked_list.a'
-include = 'tester/include'
+utils = 'tester/utils/utils.c tester/utils/linked_list.a'
+include = 'tester/utils/include'
 flags = '-Wall -Wextra -Werror'
 exam = sorted(os.listdir('tester/exam'))
 
@@ -42,11 +42,11 @@ if choice == -1:
 	for folder in exam:
 		os.system(f'mkdir -p rendu/{folder}')
 
-	os.system('cp tester/include/linked_list.h rendu')
+	os.system(f'cp {include}/linked_list.h rendu')
 
-	if (not os.path.isfile('tester/linked_list.a')):
-		os.system('make -C tester/src_lista all clean')
-	os.system('cp tester/linked_list.a rendu')
+	if (not os.path.isfile('tester/utils/linked_list.a')):
+		os.system('make -C tester/utils/src_lista all clean')
+	os.system('cp tester/utils/linked_list.a rendu')
 
 	os.system('mkdir -p exam')
 	os.system('cp -rf tester/exam/* exam')
