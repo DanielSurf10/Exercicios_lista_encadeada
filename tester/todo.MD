@@ -5,8 +5,9 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 ### Básicos - percorrer a lista - leitura da lista
 
 - [X] Crie uma função is_empty que retorna 1 se a lista estiver vazia e 0 caso contrário.
-- [ ] Crie uma função firt_node que retorne o primeiro nó da lista se ele existir ou null se não existir.
-- [ ] Crie uma função third_node que retorne o terceiro nó da lista se ele existir ou null se não existir.
+- [ ] Crie uma função first_node que retorne o primeiro nó da lista se ele existir, ou null se não existir.
+- [ ] Crie uma função third_node que retorne o terceiro nó da lista se ele existir, ou null se não existir.
+- [ ] Escreva uma função index_node que retorne o nó que está em um índice dado como parâmetro se ele existir, ou null se não existir.
 - [X] Implemente uma função lst_contains que verifica se um determinado conteúdo existe na lista. Retorna 1 se encontrado, 0 caso contrário.
 - [X] Implemente uma função lst_search que recebe uma lista e um inteiro a ser buscado. A função deve retornar o primeiro nó que contém o conteúdo ou NULL se não encontrado.
 - [X] Crie uma função lst_count que conta quantas vezes um determinado conteúdo aparece na lista.

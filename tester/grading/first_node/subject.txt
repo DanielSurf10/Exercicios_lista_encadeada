@@ -1,0 +1,12 @@
+Nome do exercício	: first_node
+Arquivos esperados	: first_node.c
+Funções permitidas	:
+--------------------------------------------------------------------------------
+
+Crie uma função first_node que retorne o primeiro nó da lista se ele existir,
+ou null se não existir.
+
+
+A sua função deve ser declarada da seguinte maneira:
+
+t_list	first_node(t_list *lst);
