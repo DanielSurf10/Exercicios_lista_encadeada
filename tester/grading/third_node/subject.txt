@@ -1,12 +1,12 @@
-Nome do exercício	: first_node
-Arquivos esperados	: first_node.c
+Nome do exercício	: third_node
+Arquivos esperados	: third_node.c
 Funções permitidas	:
 --------------------------------------------------------------------------------
 
-Crie uma função first_node que retorne o primeiro nó da lista se ele existir,
+Crie uma função third_node que retorne o terceiro nó da lista se ele existir,
 ou null se não existir.
 
 
 A sua função deve ser declarada da seguinte maneira:
 
-t_list	*first_node(t_list *lst);
+t_list	*third_node(t_list *lst);

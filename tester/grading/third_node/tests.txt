@@ -1,0 +1,7 @@
+teste 1: 1 2 3
+teste 2: 1 2 3 4
+teste 3: 1 2
+teste 4: 1
+teste 5:
+teste 6: NULL NULL NULL
+teste 7: NULL

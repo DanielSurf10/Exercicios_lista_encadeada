@@ -1,5 +1,6 @@
 is_empty
 first_node
+third_node
 lst_contains
 lst_search
 lst_count
