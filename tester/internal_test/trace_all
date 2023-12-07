@@ -1,28 +1,28 @@
 Test:		teste 1
-Expected:	third_node(list) = (3) => list = { (1) } -> { (2) } -> { (3) } -> NULL
+Expected:	first_node(list) = NULL => list = NULL
 status:		ok
 
 Test:		teste 2
-Expected:	third_node(list) = (3) => list = { (1) } -> { (2) } -> { (3) } -> { (4) } -> NULL
+Expected:	first_node(list) = (1) => list = { (1) } -> NULL
 status:		ok
 
 Test:		teste 3
-Expected:	third_node(list) = NULL => list = { (1) } -> { (2) } -> NULL
+Expected:	first_node(list) = (1) => list = { (1) } -> { (2) } -> NULL
 status:		ok
 
 Test:		teste 4
-Expected:	third_node(list) = NULL => list = { (1) } -> NULL
+Expected:	first_node(list) = (1) => list = { (1) } -> { (2) } -> { (3) } -> NULL
 status:		ok
 
 Test:		teste 5
-Expected:	third_node(list) = NULL => list = NULL
+Expected:	first_node(list) = (NULL) => list = { NULL } -> NULL
 status:		ok
 
 Test:		teste 6
-Expected:	third_node(list) = (NULL) => list = { NULL } -> { NULL } -> { NULL } -> NULL
+Expected:	first_node(list) = (NULL) => list = { NULL } -> { NULL } -> NULL
 status:		ok
 
 Test:		teste 7
-Expected:	third_node(list) = NULL => list = { NULL } -> NULL
+Expected:	first_node(list) = (NULL) => list = { NULL } -> { NULL } -> { NULL } -> NULL
 status:		ok
 

@@ -9,19 +9,21 @@ class UnitaryTest:
         self.name = test[0].strip()
         self.test = test[1].strip()
 
-
 try:
     exercise = sys.argv[1]
 except IndexError:
     print('Sem argumentos!')
     exit()
 
-# try:
-# if (sys.argv[2] == 'v'):
-#     valgrind = 'valgrind -q --leak-check=full --show-leak-kinds=all'
-# except IndexError:
-#     valgrind = ''
-valgrind = 'valgrind -q --leak-check=full --show-leak-kinds=all'
+try:
+    if (sys.argv[2] == 'v'):
+        valgrind = 'valgrind -q --leak-check=full --show-leak-kinds=all'
+    else:
+        valgrind = ''
+except IndexError:
+    valgrind = ''
+
+# valgrind = 'valgrind -q --leak-check=full --show-leak-kinds=all'
 
 print('compiling: ', end='')
 
