@@ -7,7 +7,7 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 - [X] Crie uma função is_empty que retorna 1 se a lista estiver vazia e 0 caso contrário.
 - [X] Crie uma função first_node que retorne o primeiro nó da lista se ele existir, ou null se não existir.
 - [X] Crie uma função third_node que retorne o terceiro nó da lista se ele existir, ou null se não existir.
-- [ ] Escreva uma função index_node que retorne o nó que está em um índice dado como parâmetro se ele existir, ou null se não existir.
+- [ ] Escreva uma função lst_index que retorne o nó que está em um índice dado como parâmetro se ele existir, ou null se não existir.
 - [X] Implemente uma função lst_contains que verifica se um determinado conteúdo existe na lista. Retorna 1 se encontrado, 0 caso contrário.
 - [X] Implemente uma função lst_search que recebe uma lista e um inteiro a ser buscado. A função deve retornar o primeiro nó que contém o conteúdo ou NULL se não encontrado.
 - [X] Crie uma função lst_count que conta quantas vezes um determinado conteúdo aparece na lista.
@@ -54,7 +54,7 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 - [ ] Crie uma função que remova uma gama de nós pelo índice. Ex: (2, 5) - A função vai apagar todos os nós que estão entre os índices 2 a 5
 - [ ] Crie uma função lst_split que divide uma lista em duas, dado um ponto de divisão, com índice ou um valor (igual a split).
 - [ ] Escreva uma função lst_from_array que cria uma lista encadeada a partir de um array fornecido.
-- [ ] Crie uma função que junte duas listas ordenadas e crite outra lista ordenada
+- [ ] Crie uma função que junte duas listas ordenadas e crie outra lista ordenada
 - [ ] Crie uma função que crie uma sub lista de outra (tipo igual strdup)
 - [ ] Crie uma função que crie uma sub lista de outra (tipo igual substr)
 - [ ] Crie uma função que faça uma cópia da lista com a ordem embaralhada

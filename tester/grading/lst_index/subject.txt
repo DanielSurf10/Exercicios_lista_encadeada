@@ -1,0 +1,13 @@
+Nome do exercício	: lst_index
+Arquivos esperados	: lst_index.c
+Funções permitidas	:
+--------------------------------------------------------------------------------
+
+Crie uma função lst_index que retorne o nó da nª posição da lista se ele existir
+ou null se não existir.
+A posição é dada como parâmetro.
+
+
+A sua função deve ser declarada da seguinte maneira:
+
+t_list	*lst_index(t_list *lst, int index);
