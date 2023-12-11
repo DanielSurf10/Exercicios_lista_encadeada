@@ -1,44 +1,44 @@
 Test:		teste 1
-list:		{ (1) } -> { (2) } -> { (3) } -> { (4) } -> NULL
-Expected:	lst_index(list, 0) = NULL => list = NULL
+Expected:	ft_lst_count_odd(list) = 0 => list = NULL
 status:		ok
 
 Test:		teste 2
-Expected:	lst_index(list, 0) = (0) => list = { (0) } -> NULL
+Expected:	ft_lst_count_odd(list) = 0 => list = { (0) } -> NULL
 status:		ok
 
 Test:		teste 3
-Expected:	lst_index(list, 0) = (1) => list = { (1) } -> { (2) } -> { (3) } -> { (4) } -> NULL
+Expected:	ft_lst_count_odd(list) = 1 => list = { (0) } -> { (1) } -> NULL
+status:		ok
+
+Test:		teste 4
+Expected:	ft_lst_count_odd(list) = 3 => list = { (0) } -> { (1) } -> { (2) } -> { (3) } -> { (4) } -> { (5) } -> NULL
 status:		ok
 
 Test:		teste 5
-Expected:	lst_index(list, 1) = NULL => list = { (0) } -> NULL
+Expected:	ft_lst_count_odd(list) = 0 => list = { (2) } -> { (4) } -> { (6) } -> { (8) } -> { (10) } -> { (12) } -> NULL
 status:		ok
 
 Test:		teste 6
-Expected:	lst_index(list, 5) = NULL => list = { (0) } -> NULL
+Expected:	ft_lst_count_odd(list) = 6 => list = { (1) } -> { (3) } -> { (5) } -> { (7) } -> { (9) } -> { (11) } -> NULL
 status:		ok
 
 Test:		teste 7
-Expected:	lst_index(list, 1) = (1) => list = { (0) } -> { (1) } -> NULL
+Expected:	ft_lst_count_odd(list) = 3 => list = { (1) } -> { (3) } -> { (5) } -> { (6) } -> { (8) } -> { (10) } -> NULL
 status:		ok
 
 Test:		teste 8
-Expected:	lst_index(list, 5) = (6) => list = { (1) } -> { (2) } -> { (3) } -> { (4) } -> { (5) } -> { (6) } -> NULL
+Expected:	ft_lst_count_odd(list) = 0 => list = { (NULL) } -> NULL
 status:		ok
 
 Test:		teste 9
-Expected:	lst_index(list, 5) = (6) => list = { (1) } -> { (2) } -> { (3) } -> { (4) } -> { (5) } -> { (6) } -> { (7) } -> { (8) } -> { (9) } -> NULL
+Expected:	ft_lst_count_odd(list) = 0 => list = { (NULL) } -> { (NULL) } -> NULL
 status:		ok
 
 Test:		teste 10
-Expected:	lst_index(list, 0) = (NULL) => list = { NULL } -> NULL
+Expected:	ft_lst_count_odd(list) = 1 => list = { (0) } -> { (NULL) } -> { (2) } -> { (3) } -> { (NULL) } -> NULL
 status:		ok
 
 Test:		teste 11
-Expected:	lst_index(list, 1) = (NULL) => list = { (0) } -> { NULL } -> NULL
+Expected:	ft_lst_count_odd(list) = 3 => list = { (NULL) } -> { (1) } -> { (2) } -> { (3) } -> { (NULL) } -> { (5) } -> NULL
 status:		ok
 
-Test:		teste 12
-Expected:	lst_index(list, 2) = (NULL) => list = { NULL } -> { NULL } -> { NULL } -> NULL
-status:		ok

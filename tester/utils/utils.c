@@ -6,7 +6,7 @@
 /*   By: danbarbo <danbarbo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 23:28:35 by danbarbo          #+#    #+#             */
-/*   Updated: 2023/12/04 17:57:52 by danbarbo         ###   ########.fr       */
+/*   Updated: 2023/12/11 23:15:48 by danbarbo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	_print_list(t_list *list)
 		if (node->content)
 			printf("{ (%d) } -> ", *(int *)node->content);
 		else
-			printf("{ NULL } -> ");
+			printf("{ (NULL) } -> ");
 		node = node->next;
 	}
 	printf("NULL\n");

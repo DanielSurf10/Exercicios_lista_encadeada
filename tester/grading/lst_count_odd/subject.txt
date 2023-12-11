@@ -1,0 +1,16 @@
+Nome do exercício	: lst_count_odd
+Arquivos esperados	: lst_count_odd.c
+Funções permitidas	:
+--------------------------------------------------------------------------------
+
+Implemente uma função que recebe uma lista como parâmetro.
+A função deve retornar a quantidade de números ímpares nessa lista.
+O número 0 (zero) não é ímpar.
+Considere que a lista é apenas de inteiros.
+Caso em algum nó, ao invés de um ponteiro para inteiro, tiver um ponteiro que
+aponta em NULL, a função deve pular esses nós.
+
+
+A sua função deve ser prototipada da seguinte maneira:
+
+int	lst_count_odd(t_list *lst);

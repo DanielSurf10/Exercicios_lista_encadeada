@@ -7,14 +7,15 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 - [X] Crie uma função is_empty que retorna 1 se a lista estiver vazia e 0 caso contrário.
 - [X] Crie uma função first_node que retorne o primeiro nó da lista se ele existir, ou null se não existir.
 - [X] Crie uma função third_node que retorne o terceiro nó da lista se ele existir, ou null se não existir.
-- [ ] Escreva uma função lst_index que retorne o nó que está em um índice dado como parâmetro se ele existir, ou null se não existir.
+- [X] Escreva uma função lst_index que retorne o nó que está em um índice dado como parâmetro se ele existir, ou null se não existir.
 - [X] Implemente uma função lst_contains que verifica se um determinado conteúdo existe na lista. Retorna 1 se encontrado, 0 caso contrário.
 - [X] Implemente uma função lst_search que recebe uma lista e um inteiro a ser buscado. A função deve retornar o primeiro nó que contém o conteúdo ou NULL se não encontrado.
 - [X] Crie uma função lst_count que conta quantas vezes um determinado conteúdo aparece na lista.
 - [X] Crie uma função lst_index_all que retorne o índice + 1 de um determinado valor na lista, ou o tamanho da lista caso não seja encontrado.
 - [X] Escreva uma função lst_sum que percorre a lista e retorna a soma de todos os elementos.
-- [ ] Implemente uma função lst_count_odd que conta o número de elementos ímpares na lista.
-- [ ] Implemente uma função lst_count_even que conta o número de elementos pares na lista.
+- [X] Implemente uma função lst_count_odd que conta o número de elementos ímpares na lista.
+- [X] Implemente uma função lst_count_even que conta o número de elementos pares na lista.
+- [ ] Escreva uma função lst_count_mutiple que recebe um número como parâmetro e conta quantos números são divisiveis por esse número.
 - [ ] Escreva uma função lst_average que calcula a média dos valores na lista.
 - [ ] Escreva uma função lst_max_value que retorna o nó que contém o valor máximo na lista.
 - [ ] Escreva uma função lst_min_value que retorna o nó que contém o valor máximo na lista.
