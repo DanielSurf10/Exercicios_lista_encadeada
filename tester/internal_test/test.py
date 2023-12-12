@@ -27,9 +27,9 @@ except IndexError:
 
 print('compiling: ', end='')
 
-command = f'cc -Wall -Wextra -Werror -I tester/utils/include tester/grading/{exercise}/{exercise}.c tester/grading/{exercise}/main.c tester/utils/utils.c tester/utils/linked_list.a -o tester/internal_test/test'
+os.system('echo -n "" > tester/internal_test/trace_all')
 
-os.system(f'echo -n "" > tester/internal_test/trace_all')
+command = f'cc -g3 -Wall -Wextra -Werror -I tester/utils/include tester/grading/{exercise}/{exercise}.c tester/grading/{exercise}/main.c tester/utils/utils.c tester/utils/linked_list.a -o tester/internal_test/test'
 result = subprocess.run(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
 if (result.returncode != 0):
@@ -60,9 +60,9 @@ for test in tests:
         print('ok')
         fd_trace_all.write('ok\n\n')
     else:
-        fd_trace_error = open(f'tester/internal_test/trace_all', 'a')
+        fd_trace_error = open('tester/internal_test/trace_all', 'a')
         fd_trace_error.write(f'Test:		{test.name}\n')
-        fd_trace_error.write(f'Expected:	{result.stdout}')
+        fd_trace_error.write(f'Expected:	{result.stdout}{chr(10) if result.returncode != 0 else ""}')
         fd_trace_error.write('status:		')
 
         if (result.returncode != 0):
@@ -83,4 +83,4 @@ for test in tests:
 
 print('-' * 50)
 
-os.system('rm -f tester/internal_test/test')
+# os.system('rm -f tester/internal_test/test')

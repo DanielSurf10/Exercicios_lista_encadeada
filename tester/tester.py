@@ -114,7 +114,7 @@ if all_ok:
 		fd_trace_all = open(f'trace/{exams[choice]}/trace_all', 'a')
 		fd_trace_all.write(f'Test:		{test.name}\n')
 		fd_trace_all.write(f'Expected:	{result_original.stdout}')
-		fd_trace_all.write(f'Yours:		{result_for_test.stdout}')
+		fd_trace_all.write(f'Yours:		{result_for_test.stdout}{chr(10) if result_for_test.returncode != 0 else ""}')
 		fd_trace_all.write('status:		')
 
 		if (result_original.stdout == result_for_test.stdout and result_for_test.returncode == 0 and result_for_test.stderr == ''):
@@ -124,7 +124,7 @@ if all_ok:
 			fd_trace_error = open(f'trace/{exams[choice]}/trace_errors', 'a')
 			fd_trace_error.write(f'Test:		{test.name}\n')
 			fd_trace_error.write(f'Expected:	{result_original.stdout}')
-			fd_trace_error.write(f'Yours:		{result_for_test.stdout}')
+			fd_trace_error.write(f'Yours:		{result_for_test.stdout}{chr(10) if result_for_test.returncode != 0 else ""}')
 			fd_trace_error.write('status:		')
 
 			if (result_for_test.returncode != 0):

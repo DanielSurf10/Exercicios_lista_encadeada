@@ -1,0 +1,26 @@
+Nome do exercício	: lst_is_palindrome
+Arquivos esperados	: lst_is_palindrome.c
+Funções permitidas	: ft_lstsize, ft_lstlast
+--------------------------------------------------------------------------------
+
+Crie uma função que recebe um ponteiro para o primeiro nó de uma lista encadeada
+e retorne 1 se ela é palíndroma e 0 caso não for.
+Palíndromo é tudo que pode ser lida de trás pra frente e que, independente da
+direção, mantém o seu sentido.
+Uma lista vazia é considerada palíndroma.
+
+Considere uma lista que contém apenas inteiros.
+Nos testes não haverão testes com nós com conteúdos apontando em NULL.
+
+Exemplos:
+
+1 2 3 4 5	-> Não é palíndromo
+1 2 3 2 1	-> É palíndromo
+0 0			-> É palíndromo
+1			-> É palíndromo
+1 2			-> Não é palíndromo
+
+
+A sua função deve ser declarada da seguinte maneira:
+
+int	lst_is_palindrome(t_list *lst);

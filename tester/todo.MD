@@ -8,6 +8,7 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 - [X] Crie uma função first_node que retorne o primeiro nó da lista se ele existir, ou null se não existir.
 - [X] Crie uma função third_node que retorne o terceiro nó da lista se ele existir, ou null se não existir.
 - [X] Escreva uma função lst_index que retorne o nó que está em um índice dado como parâmetro se ele existir, ou null se não existir.
+- [ ] Escreva uma função lst_rev_index que retorne o nó que está em um índice de trás pra frente dado como parâmetro se ele existir, ou null se não existir.
 - [X] Implemente uma função lst_contains que verifica se um determinado conteúdo existe na lista. Retorna 1 se encontrado, 0 caso contrário.
 - [X] Implemente uma função lst_search que recebe uma lista e um inteiro a ser buscado. A função deve retornar o primeiro nó que contém o conteúdo ou NULL se não encontrado.
 - [X] Crie uma função lst_count que conta quantas vezes um determinado conteúdo aparece na lista.
@@ -19,7 +20,7 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 - [ ] Escreva uma função lst_average que calcula a média dos valores na lista.
 - [ ] Escreva uma função lst_max_value que retorna o nó que contém o valor máximo na lista.
 - [ ] Escreva uma função lst_min_value que retorna o nó que contém o valor máximo na lista.
-- [ ] Crie uma função que checa se a lista é palindroma ou não.
+- [X] Crie uma função lst_is_palindrome que checa se a lista é palindroma ou não.
 - [ ] Crie uma função que econtre um par cuja a soma é igual a um valor X. Ex: (1 2 3 4 5 6 7), X = 4 -> (1,3)
 - [ ] Escreva uma função lst_sub_lst que verifica se uma determinada sequência de elementos aparece na lista. Tipo como a função substr, mas ao invés de string, o big e o little são listas encadeadas.
 - [ ] Escreva uma função que compare 2 listas, assim como a strcmp.
@@ -48,6 +49,8 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 - [ ] Crie uma função que encontre e remova um loop em uma lista
 - [ ] Crie uma função que remova todos os valores acima de um valor X
 - [ ] Crie uma função que remova todos os nós com conteúdo NULL
+- [ ] Crie uma função que remova todos os nós de uma lista que estão em outra lista.
+- [ ] Dada uma lista encadeada, escreva uma função para inverter todos os primeiros k nós (onde k é dado como parâmetro). https://redquark.org/leetcode/0025-reverse-nodes-in-k-group/
 
 ### Avançados - Cria novas listas - Criação de novas listas
 
@@ -56,6 +59,7 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 - [ ] Crie uma função lst_split que divide uma lista em duas, dado um ponto de divisão, com índice ou um valor (igual a split).
 - [ ] Escreva uma função lst_from_array que cria uma lista encadeada a partir de um array fornecido.
 - [ ] Crie uma função que junte duas listas ordenadas e crie outra lista ordenada
+- [ ] Crie uma função que junte k listas encadeadas ordenadas em uma lista encadeada ordenada. https://afteracademy.com/blog/merge-k-sorted-lists
 - [ ] Crie uma função que crie uma sub lista de outra (tipo igual strdup)
 - [ ] Crie uma função que crie uma sub lista de outra (tipo igual substr)
 - [ ] Crie uma função que faça uma cópia da lista com a ordem embaralhada

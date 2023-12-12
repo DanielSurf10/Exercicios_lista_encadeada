@@ -12,4 +12,4 @@ aponta em NULL, a função deve pular esses nós.
 
 A sua função deve ser declarada da seguinte maneira:
 
-t_list	*lst_sum(t_list *lst);
+int	lst_sum(t_list *lst);
