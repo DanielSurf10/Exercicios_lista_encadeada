@@ -2,6 +2,7 @@ is_empty
 first_node
 third_node
 lst_index
+lst_rev_index
 lst_count_odd
 lst_count_even
 lst_contains

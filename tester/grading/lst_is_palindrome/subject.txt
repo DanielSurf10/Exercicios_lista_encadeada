@@ -4,10 +4,10 @@ Funções permitidas	: ft_lstsize, ft_lstlast
 --------------------------------------------------------------------------------
 
 Crie uma função que recebe um ponteiro para o primeiro nó de uma lista encadeada
-e retorne 1 se ela é palíndroma e 0 caso não for.
+e retorne 1 se ela é palíndromo e 0 caso não for.
 Palíndromo é tudo que pode ser lida de trás pra frente e que, independente da
 direção, mantém o seu sentido.
-Uma lista vazia é considerada palíndroma.
+Uma lista vazia é considerada palíndromo.
 
 Considere uma lista que contém apenas inteiros.
 Nos testes não haverão testes com nós com conteúdos apontando em NULL.

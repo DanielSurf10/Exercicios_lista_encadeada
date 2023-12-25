@@ -9,6 +9,7 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 - [X] Crie uma função third_node que retorne o terceiro nó da lista se ele existir, ou null se não existir.
 - [X] Escreva uma função lst_index que retorne o nó que está em um índice dado como parâmetro se ele existir, ou null se não existir.
 - [ ] Escreva uma função lst_rev_index que retorne o nó que está em um índice de trás pra frente dado como parâmetro se ele existir, ou null se não existir.
+- [ ] Escreva uma função lst_index_two que retorne o nó que está em um índice dado como parâmetro se ele existir se for positivo, ou o índice de trás pra frente se ele existir se for negativo, ou null se não existir.
 - [X] Implemente uma função lst_contains que verifica se um determinado conteúdo existe na lista. Retorna 1 se encontrado, 0 caso contrário.
 - [X] Implemente uma função lst_search que recebe uma lista e um inteiro a ser buscado. A função deve retornar o primeiro nó que contém o conteúdo ou NULL se não encontrado.
 - [X] Crie uma função lst_count que conta quantas vezes um determinado conteúdo aparece na lista.
@@ -50,7 +51,7 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 - [ ] Crie uma função que remova todos os valores acima de um valor X
 - [ ] Crie uma função que remova todos os nós com conteúdo NULL
 - [ ] Crie uma função que remova todos os nós de uma lista que estão em outra lista.
-- [ ] Dada uma lista encadeada, escreva uma função para inverter todos os primeiros k nós (onde k é dado como parâmetro). https://redquark.org/leetcode/0025-reverse-nodes-in-k-group/
+- [ ] Dada uma lista encadeada, escreva uma função para inverter todos os k primeiros nós (onde k é dado como parâmetro). https://redquark.org/leetcode/0025-reverse-nodes-in-k-group/
 
 ### Avançados - Cria novas listas - Criação de novas listas
 

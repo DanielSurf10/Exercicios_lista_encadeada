@@ -1,0 +1,35 @@
+Nome do exercício	: lst_rev_index
+Arquivos esperados	: lst_rev_index.c
+Funções permitidas	:
+--------------------------------------------------------------------------------
+
+Crie uma função lst_rev_index que retorne o nó da nª posição da lista,
+se ele existir, começando do último elemento e indo até o primeiro,
+ou null se não existir.
+A posição é dada como parâmetro.
+
+Exemplos:
+
+lista => { (0) } -> { (1) } -> { (2) } -> NULL
+
+- Com 0 a sua função deve retornar: (2)
+- Com 2 a sua função deve retornar: (0)
+- Com 5 a sua função deve retornar: NULL
+
+lista_vazia => NULL
+
+- Com 0 a sua função deve retornar: NULL
+- Com 2 a sua função deve retornar: NULL
+- Com 5 a sua função deve retornar: NULL
+
+lista_com_nós_nulos =>  { (0) } -> { (1) } -> { (NULL) } -> { (3) } -> NULL
+
+- Com 0 a sua função deve retornar: (3)
+- Com 1 a sua função deve retornar: (NULL)
+- Com 3 a sua função deve retornar: (0)
+- Com 4 a sua função deve retornar: NULL
+
+
+A sua função deve ser declarada da seguinte maneira:
+
+t_list	*lst_rev_index(t_list *lst, int index);
