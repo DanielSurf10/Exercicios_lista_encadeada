@@ -8,7 +8,7 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 - [X] Crie uma função first_node que retorne o primeiro nó da lista se ele existir, ou null se não existir.
 - [X] Crie uma função third_node que retorne o terceiro nó da lista se ele existir, ou null se não existir.
 - [X] Escreva uma função lst_index que retorne o nó que está em um índice dado como parâmetro se ele existir, ou null se não existir.
-- [ ] Escreva uma função lst_rev_index que retorne o nó que está em um índice de trás pra frente dado como parâmetro se ele existir, ou null se não existir.
+- [X] Escreva uma função lst_rev_index que retorne o nó que está em um índice de trás pra frente dado como parâmetro se ele existir, ou null se não existir.
 - [ ] Escreva uma função lst_index_two que retorne o nó que está em um índice dado como parâmetro se ele existir se for positivo, ou o índice de trás pra frente se ele existir se for negativo, ou null se não existir.
 - [X] Implemente uma função lst_contains que verifica se um determinado conteúdo existe na lista. Retorna 1 se encontrado, 0 caso contrário.
 - [X] Implemente uma função lst_search que recebe uma lista e um inteiro a ser buscado. A função deve retornar o primeiro nó que contém o conteúdo ou NULL se não encontrado.
@@ -22,7 +22,7 @@ https://www.w3resource.com/c-programming-exercises/linked_list/index.php
 - [ ] Escreva uma função lst_max_value que retorna o nó que contém o valor máximo na lista.
 - [ ] Escreva uma função lst_min_value que retorna o nó que contém o valor máximo na lista.
 - [X] Crie uma função lst_is_palindrome que checa se a lista é palindroma ou não.
-- [ ] Crie uma função que econtre um par cuja a soma é igual a um valor X. Ex: (1 2 3 4 5 6 7), X = 4 -> (1,3)
+- [ ] Crie uma função lst_sum_pair que econtre o primeiro par cuja a soma é igual a um valor X, e atribua nos ponteiros dado como parâmetro. Ex: (1 2 3 4 5 6 7), X = 4 -> (1, 3)
 - [ ] Escreva uma função lst_sub_lst que verifica se uma determinada sequência de elementos aparece na lista. Tipo como a função substr, mas ao invés de string, o big e o little são listas encadeadas.
 - [ ] Escreva uma função que compare 2 listas, assim como a strcmp.
 

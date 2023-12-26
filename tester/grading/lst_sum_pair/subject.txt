@@ -1,0 +1,44 @@
+Nome do exercício	: lst_sum_pair
+Arquivos esperados	: lst_sum_pair.c
+Funções permitidas	:
+--------------------------------------------------------------------------------
+
+Crie uma função que aceite um ponteiro para o primeiro nó de uma lista encadeada
+simples e busque por um par de nós cuja soma seja igual a um número inteiro
+fornecido como parâmetro.
+Se um par for encontrado, atribua os nós correspondentes aos ponteiros
+fornecidos como parâmetro e retorne 1.
+Se nenhum par for encontrado, ajuste ambos os ponteiros para NULL e retorne 0.
+
+A função não deve alocar novos nós; em vez disso, ela deve simplesmente atribuir
+os ponteiros dos nós encontrados aos ponteiros dados como parâmetro.
+Considere que a lista contém apenas números inteiros.
+Caso algum nó contenha um ponteiro que aponte para NULL, a função deve ignorar
+esses nós durante a busca.
+
+Exemplos:
+
+lista => { (0) } -> { (1) } -> { (2) } -> { (3) } -> NULL
+
+- Com (0) deve ser: (NULL, NULL) - retorno = 0
+- Com (1) deve ser: (0, 1)       - retorno = 1
+- Com (2) deve ser: (0, 2)       - retorno = 1
+- Com (3) deve ser: (1, 2)       - retorno = 1
+- Com (4) deve ser: (NULL, NULL) - retorno = 0
+- Com (5) deve ser: (2, 3)       - retorno = 1
+
+
+lista => { (0) } -> { (1) } -> { (NULL) } -> { (3) } -> { (4) } -> NULL
+
+- Com (0) deve ser: (NULL, NULL)
+- Com (1) deve ser: (0, 1)
+- Com (2) deve ser: (NULL, NULL)
+- Com (3) deve ser: (0, 3)
+- Com (4) deve ser: (0, 4)
+- Com (5) deve ser: (1, 4)
+
+
+A prototipagem da função deve seguir o formato abaixo:
+
+int	lst_sum_pair(t_list *lst, int sum_value, t_list **node_one,
+			t_list **node_two);

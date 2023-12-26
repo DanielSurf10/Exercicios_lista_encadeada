@@ -52,32 +52,26 @@ for test in tests:
 
     result = subprocess.run(f'{valgrind} tester/internal_test/test {test.test}', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     fd_trace_all = open('tester/internal_test/trace_all', 'a')
-    fd_trace_all.write(f'Test:		{test.name}\n')
-    fd_trace_all.write(f'Expected:	{result.stdout}')
-    fd_trace_all.write('status:		')
 
     if (result.returncode == 0 and result.stderr == ''):
         print('ok')
-        fd_trace_all.write('ok\n\n')
+        fd_trace_all.write(f'Test:		{test.name}\n')
+        fd_trace_all.write(f'Expected:	{result.stdout}')
+        fd_trace_all.write('status:		ok\n\n')
     else:
-        fd_trace_error = open('tester/internal_test/trace_all', 'a')
-        fd_trace_error.write(f'Test:		{test.name}\n')
-        fd_trace_error.write(f'Expected:	{result.stdout}{chr(10) if result.returncode != 0 else ""}')
-        fd_trace_error.write('status:		')
+        fd_trace_all.write(f'Test:		{test.name}\n')
+        fd_trace_all.write(f'Expected:	{result.stdout}{chr(10) if result.returncode != 0 else ""}')
+        fd_trace_all.write('status:		')
 
         if (result.returncode != 0):
             print('ko_seg_falt')
             fd_trace_all.write('ko_seg_falt\n\n')
-            fd_trace_error.write('ko_seg_falt\n\n')
         elif (result.stderr != ''):
             print('ko_leak')
             fd_trace_all.write('ko_leak\n\n')
-            fd_trace_error.write('ko_leak\n\n')
         else:
             print('ko')
             fd_trace_all.write('ko\n\n')
-            fd_trace_error.write('ko\n\n')
-        fd_trace_error.close()
 
     fd_trace_all.close()
 
